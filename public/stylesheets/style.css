@@ -12,3 +12,12 @@ body {
     font-family: 'Asap', sans-serif;
 }
 
+.btn {
+    background-color: #2C3487;
+    text-decoration: none;
+    color: white;
+    font-family: 'Asap', sans-serif;
+    border-radius: 8px;
+    border: none;
+    padding: 8px;
+}
