@@ -1,27 +1,41 @@
-<form class="login-form">
-    <div>
-      <input type="text" id="email-login" placeholder="Email"/>
+<div class="container">
+  <div id="login">
+    <h1>This is an example of the Authorization Code flow</h1>
+    <a href="/login" class="btn btn-primary">Log in with Spotify</a>
+  </div>
+  <div id="loggedin">
+    <div id="user-profile">
     </div>
-    <div>
-      <input type="password" id="password-login" placeholder="Password"/>
+    <div id="oauth">
     </div>
-    <div>
-      <button type="submit">login</button>
-    </div>
-  </form>
+    <button class="btn btn-default" id="obtain-new-token">Obtain new token using the refresh token</button>
+  </div>
+</div>
 
-  <form class="signup-form">
-    <div>
-      <input type="text" id="username-signup" placeholder="Username"/>
-    </div>
-    <div>
-      <input type="text" id="email-signup" placeholder="Email"/>
-    </div>
-    <div>
-      <input type="password" id="password-signup" placeholder="Password"/>
-    </div>
-    <div>
-      <button type="submit">sign up</button>
-    </div>
-  </form>
-  <script src=""></script>
+<form class="login-form">
+  <div>
+    <input type="text" id="email-login" placeholder="Email" />
+  </div>
+  <div>
+    <input type="password" id="password-login" placeholder="Password" />
+  </div>
+  <div>
+    <button type="submit">login</button>
+  </div>
+</form>
+
+<form class="signup-form">
+  <div>
+    <input type="text" id="username-signup" placeholder="Username" />
+  </div>
+  <div>
+    <input type="text" id="email-signup" placeholder="Email" />
+  </div>
+  <div>
+    <input type="password" id="password-signup" placeholder="Password" />
+  </div>
+  <div>
+    <button type="submit">sign up</button>
+  </div>
+</form>
+<script src=""></script>
