@@ -1,27 +1,81 @@
-<form class="login-form">
-    <div>
-      <input type="text" id="email-login" placeholder="Email"/>
-    </div>
-    <div>
-      <input type="password" id="password-login" placeholder="Password"/>
-    </div>
-    <div>
-      <button type="submit">login</button>
-    </div>
-  </form>
+<!DOCTYPE html>
+<html lang="en">
 
-  <form class="signup-form">
-    <div>
-      <input type="text" id="username-signup" placeholder="Username"/>
-    </div>
-    <div>
-      <input type="text" id="email-signup" placeholder="Email"/>
-    </div>
-    <div>
-      <input type="password" id="password-signup" placeholder="Password"/>
-    </div>
-    <div>
-      <button type="submit">sign up</button>
-    </div>
-  </form>
-  <script src=""></script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRESCENDO</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="/public/stylesheets/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="relative container  mx-auto p-5">
+        <div class="flex items-center justify-between">
+            <div class="pt-2 font-sans font-bold text-5xl text-white pr-2">
+                CRESCENDO
+            </div>
+            <a href="#" id="login"
+                class="text-white bg-darkerBlue flex p-3 px-6 pt-2 block rounded-full baseline hover:bg-brightRed md:block">
+                login
+            </a>
+
+        </div>
+    </nav>
+    <!-- this will go in homepage.handlebars -->
+    <section id="login-pg">
+        <div
+            class="container flex flex-col sm:flex-row items-center p-2 mx-auto mt-10 space-y-0 md:space-y-0 justify-between">
+            <!-- sign up -->
+            <div class="bg-white mx-auto p-5 ">
+                <p class="text-black  pb-3 text-center text-xl"> Sign up here to start sharing your favorite music </p>
+                <form class="pt-3 bg-lightPurp mx-auto">
+                    <h2 class="text-darkGray text-2xl pl-5">Get started</h2>
+                    <div class="text-center pt-1">
+                        <input class="pl-5 rounded-full" type="text" id="username-signup" placeholder="Username" />
+                    </div>
+                    <div class="text-center pt-2">
+                        <input class="pl-5 rounded-full" type="text" id="email-signup" placeholder="Email" />
+                    </div>
+                    <div class="text-center pt-2">
+                        <input class="pl-5 rounded-full" type="password" id="password-signup" placeholder="Password" />
+                    </div>
+                    <div class="text-center text-xl pt-2">
+                        <a href="/homepage" id="login-user"
+                            class="text-white bg-darkerBlue flex p-3 px-6 pt-2 block rounded-full baseline hover:bg-brightRed md:block">
+                            sign up
+                        </a>
+                    </div>
+                </form>
+            </div>
+            <!-- login -->
+            <div class="bg-white mx-auto p-5 ">
+                <form class="pt-3 bg-lightPurp mx-auto">
+                    <h2 class="text-darkGray text-2xl pl-5">Login</h2>
+                    <div class="text-center pt-2">
+                        <input class="pl-5 rounded-full" type="text" id="email-signup" placeholder="Email" />
+                    </div>
+                    <div class="text-center pt-2">
+                        <input class="pl-5 rounded-full" type="password" id="password-signup" placeholder="Password" />
+                    </div>
+                    <div class="text-center text-xl pt-2">
+                        <a href="/homepage" id="login-user"
+                            class="text-white bg-darkerBlue flex p-3 px-6 pt-2 block rounded-full basline hover:bg-brightRed md:block">
+                            log in
+                        </a>
+                    </div>
+                </form>
+            </div>
+        <script src=""></script>
+    </section>
+    <footer>
+        <h4 class="text-white">made by Layne, Matthew, Paul, Scott, & Xander</h4>
+    </footer>
+    <script src=""></script>
+</body>
+
+</html>
