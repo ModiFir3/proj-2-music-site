@@ -1,17 +1,16 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connections');
 
-class User extends Model { }
+class Spotify extends Model { }
 
-User.init(
+Spotify.init(
     {
         id: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            primaryKey: true,
-            autoIncrement: true
+            primaryKey: true
         },
-        username: {
+        display_name: {
             type: DataTypes.STRING,
             allowNullL: false,
         },
@@ -22,6 +21,10 @@ User.init(
             validate: {
                 isEmail: true
             }
+        },
+        spotify_URL: {
+            type: DataTypes.STRING,
+            allowNull: false
         }
     },
     {
@@ -29,8 +32,8 @@ User.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'user'
+        modelName: 'spotify'
     }
 );
 
-module.exports = User;
+module.exports = Spotify;
