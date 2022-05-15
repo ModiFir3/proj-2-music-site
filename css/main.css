@@ -472,6 +472,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 100%;
 }
 
+@media (min-width: 375px) {
+  .container {
+    max-width: 375px;
+  }
+}
+
 @media (min-width: 480px) {
   .container {
     max-width: 480px;
@@ -487,6 +493,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 @media (min-width: 976px) {
   .container {
     max-width: 976px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .container {
+    max-width: 1150px;
   }
 }
 
@@ -605,14 +617,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-top: 0.25rem;
 }
 
-.pl-12 {
-  padding-left: 3rem;
-}
-
-.pl-6 {
-  padding-left: 1.5rem;
-}
-
 .text-left {
   text-align: left;
 }
@@ -674,8 +678,18 @@ body {
 }
 
 @media (min-width: 480px) {
+  .sm\:w-1\/2 {
+    width: 50%;
+  }
+
   .sm\:flex-row {
     flex-direction: row;
+  }
+
+  .sm\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0px * var(--tw-space-y-reverse));
   }
 }
 
@@ -684,8 +698,8 @@ body {
     display: block;
   }
 
-  .md\:w-1\/2 {
-    width: 50%;
+  .md\:flex {
+    display: flex;
   }
 
   .md\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
@@ -695,14 +709,7 @@ body {
   }
 }
 
-@media (min-width: 976px) {
-  .lg\:resize {
-    resize: both;
-  }
-}
-
-
-
+ 
 
 
 

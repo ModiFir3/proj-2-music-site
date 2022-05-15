@@ -2,10 +2,12 @@ module.exports = {
   content: ['./*.html'],
   theme: {
     screens: {
+      xs:'375px',
       sm: '480px',
       md: '768px',
       lg: '976px',
-      xl: '1440px'
+      xl: '1150px',
+      xxl: '1440px'
     },
     extend: {
       colors:{
@@ -21,6 +23,8 @@ module.exports = {
       padding: {
         '1/2': '50%',
         full:'100%',
+        '2/3': '66.66667%',
+        '1/3': '33.33333%'
       },
     },
     fontFamily: {
