@@ -1,0 +1,25 @@
+{
+  "name": "proj-2-music-site",
+  "version": "1.0.0",
+  "description": "# description",
+  "main": "server.js",
+  "scripts": {
+    "build": "tailwindcss -i ./public/stylesheets/style.css -o ./css/main.css",
+    "watch": "tailwindcss -i ./public/stylesheets/style.css -o ./css/main.css --watch",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laynewegenast/proj-2-music-site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/laynewegenast/proj-2-music-site/issues"
+  },
+  "homepage": "https://github.com/laynewegenast/proj-2-music-site#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.0.24"
+  }
+}
