@@ -10,25 +10,30 @@
     <link rel="stylesheet" href="/public/stylesheets/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Asap&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
-    <nav class="relative container mx-auto p-6">
-        <div class="flex items-center justify-between">
-            <!--Logo-->
-            <div class="pt-2">
-                <img src="" alt="">
-            </div>
-            <!--Menu Items-->
-            <div class="hidden md:flex space-x-6">
-                <a href=""></a>
-                <a href=""></a>
-                <a href=""></a>
-                <a href=""></a>
-            </div>
+<body class="bg-lightPurp Flex">
+    <!--Navigation-->
+    <div class="h-screen flex items-end justify-content px-6 pb-6 bg-bluePurple shadow-xl">
+        <button class="relative z-30 peer h-16 w-16 rounded-full bg-lightPurp 
+        hover:bg-purple-600 focus:bg-purple-600 active:bg-purple-700 transition">
+            <img src="./public/images/Homeheadphones.png" alt="">
+        </button>
+
+        <div class="z-20 fixed top-0 -left-96 lg:left-0 h-screen lg:w-64 w-9/12 bg-white 
+        shadow-2xl peer-focus:left-0 peer:transition ease-out delay-150 duration-200">
         </div>
-    </nav>
+        <div class="z-10 lg:hidden fixed top-0 left-0 w-screen h-screen bg-gray-900 bg-opacity-30 
+        opacity-0 peer-focus:opactiy-100 peer:transition duration-200">
+        </div>
+    </div>
+    <!--Hero Section-->
+    <section id="hero">
+
+    </section>
 </body>
 
 </html>
