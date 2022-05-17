@@ -26,6 +26,7 @@ module.exports = {
         '2/3': '66.66667%',
         '1/3': '33.33333%'
       },
+      
     },
     fontFamily: {
       'sans': ['Asap', 'sans-serif'],
