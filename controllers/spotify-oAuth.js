@@ -10,10 +10,12 @@
 var request = require('request'); // "Request" library
 var querystring = require('querystring');
 const router = require('express').Router();
+const sequelize = require('../config/connection');
+
 
 var client_id = 'b970410c9aaa4a07b9bbb3377d83d587'; // Your client id
 var client_secret = 'f3a5786d28aa4dc08e17c34af59f5d2a'; // Your secret
-var redirect_uri = 'http://localhost:3001/callback'; // Your redirect uri
+var redirect_uri = 'http://localhost:8888/callback'; // Your redirect uri
 
 /**
  * Generates a random string containing numbers and letters
@@ -32,8 +34,8 @@ var generateRandomString = function (length) {
 
 var stateKey = 'spotify_auth_state';
 
-router.get('/login', function (req, res) {
-
+router.get('/spotify-login', function (req, res) {
+    console.log('clicked')
     var state = generateRandomString(16);
     res.cookie(stateKey, state);
 
