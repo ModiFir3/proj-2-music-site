@@ -1,5 +1,5 @@
 module.exports = {
-  content: ['./*.html'],
+  content: ['./*.handlebars'],
   theme: {
     screens: {
       xs:'375px',

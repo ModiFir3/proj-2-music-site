@@ -1,27 +1,46 @@
-<form class="login-form">
-    <div>
-      <input type="text" id="email-login" placeholder="Email"/>
-    </div>
-    <div>
-      <input type="password" id="password-login" placeholder="Password"/>
-    </div>
-    <div>
-      <button type="submit">login</button>
-    </div>
-  </form>
-
-  <form class="signup-form">
-    <div>
-      <input type="text" id="username-signup" placeholder="Username"/>
-    </div>
-    <div>
-      <input type="text" id="email-signup" placeholder="Email"/>
-    </div>
-    <div>
-      <input type="password" id="password-signup" placeholder="Password"/>
-    </div>
-    <div>
-      <button type="submit">sign up</button>
-    </div>
-  </form>
-  <script src=""></script>
+ <section id="login-pg">
+        <div
+            class="container flex flex-col sm:flex-row items-center p-2 mx-auto mt-10 space-y-1 md:space-y-1 justify-between">
+            
+            <div class="bg-white mx-auto p-5 ">
+                <p class="text-black  pb-3 text-center text-xl"> Sign up here to start sharing your <br> favorite music </p>
+                <form class="pt-3 bg-lightPurp mx-auto">
+                    <h2 class="text-darkGray text-2xl pl-5 font-bold">Get started</h2>
+                    <div class="text-center text-xl pt-2 p-4">
+                        <input class="pl-5 rounded-full" type="text" id="username-signup" placeholder="Username" />
+                    </div>
+                    <div class="text-center text-xl pt-2 p-4">
+                        <input class="pl-5  rounded-full" type="text" id="email-signup" placeholder="Email" />
+                    </div>
+                    <div class="text-center text-xl p-4 pt-2">
+                        <input class="pl-5 rounded-full" type="password" id="password-signup" placeholder="Password" />
+                    </div>
+                    <div class="text-center text-xl pt-2 pb-2 p-12">
+                        <a href="/homepage" id="login-user"
+                            class="text-white bg-darkerBlue flex p-3 px-6 pt-2 block rounded-full baseline hover:bg-brightRed md:block">
+                            sign up
+                        </a>
+                    </div>
+                </form>
+            </div>
+          
+            <div class="bg-white mx-auto p-5 ">
+                <form class="pt-3 bg-lightPurp mx-auto">
+                    <h2 class="text-darkGray text-2xl pl-5 font-bold">Login</h2>
+                    <div class="text-center text-xl pt-2 p-4">
+                        <input class="pl-5 rounded-full" type="text" id="email-signup" placeholder="Email" />
+                    </div>
+                    <div class="text-center text-xl p-4 pt-2">
+                        <input class="pl-5 rounded-full" type="password" id="password-signup" placeholder="Password" />
+                    </div>
+                    <div class="text-center text-xl p-4 pt-2">
+                        <a href="/homepage" id="login-user"
+                            class="text-white bg-darkerBlue flex p-3 px-6 pt-2 block rounded-full basline hover:bg-brightRed md:block">
+                            log in
+                        </a>
+                    </div>
+                </form>
+            </div>
+            
+        <script src=""></script>
+    </section>
