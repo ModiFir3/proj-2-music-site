@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { User } = require('../../models')
 
 // const Spotify = require('../../models/Spotify');
 
@@ -7,13 +8,9 @@ const router = require('express').Router();
 // TODO: Switch GET to GET if applies
 
 // ! Get Users Profile
-router.get('/user', (req, res) => {
-    var apiURl = 'https://api.spotify.com/v1/users/1241218337';
-
-    fetch(apiURl)
-        .then(response => res.json(response))
-        .then(data => console.log(data));
-});
+router.post('/user', (req, res) => {
+    User.create()
+})
 
 
 

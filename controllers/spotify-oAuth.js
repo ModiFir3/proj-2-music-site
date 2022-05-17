@@ -11,10 +11,13 @@ var request = require('request'); // "Request" library
 var querystring = require('querystring');
 const router = require('express').Router();
 const sequelize = require('../config/connection');
+require('dotenv').config();
+const { User } = require('../models')
 
 
-var client_id = 'b970410c9aaa4a07b9bbb3377d83d587'; // Your client id
-var client_secret = 'f3a5786d28aa4dc08e17c34af59f5d2a'; // Your secret
+
+var client_id = process.env.client_id; // Your client id
+var client_secret = process.env.client_secret; // Your secret
 var redirect_uri = 'http://localhost:8888/callback'; // Your redirect uri
 
 /**
@@ -35,7 +38,6 @@ var generateRandomString = function (length) {
 var stateKey = 'spotify_auth_state';
 
 router.get('/spotify-login', function (req, res) {
-    console.log('clicked')
     var state = generateRandomString(16);
     res.cookie(stateKey, state);
 
@@ -94,7 +96,7 @@ router.get('/callback', function (req, res) {
 
                 // use the access token to access the Spotify Web API
                 request.get(options, function (error, response, body) {
-                    console.log(body);
+                    // console.log(body);
                 });
 
                 // we can also pass the token to the browser to make requests from there
@@ -136,5 +138,16 @@ router.get('/refresh_token', function (req, res) {
         }
     });
 });
+
+router.post('/spotify-login', (req, res) => {
+    User.create({
+        display_name: req.body.display_name,
+        email: req.body.email,
+        spotify_id: req.body.spotify_id
+    })
+        .then(spotifyData => {
+            console.log(spotifyData)
+        })
+})
 
 module.exports = router;

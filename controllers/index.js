@@ -5,9 +5,6 @@ const homepageRoutes = require('./homepage-route');
 const spotifyRoutes = require('./spotify-oAuth');
 
 router.use('/api', apiRoutes);
-router.use('/login', loginRoutes);
-
-
 router.use('/', homepageRoutes);
 router.use('/', spotifyRoutes);
 
