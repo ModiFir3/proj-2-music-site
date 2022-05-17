@@ -1,0 +1,93 @@
+<section id="login-pg">
+  <div
+    class="container flex flex-col sm:flex-row items-center p-2 mx-auto mt-10 space-y-1 md:space-y-1 justify-between">
+
+    <div class="bg-white mx-auto p-5 ">
+      <p class="text-black  pb-3 text-center text-xl"> Sign up here to start sharing your <br> favorite music </p>
+      <form class="pt-3 bg-lightPurp mx-auto">
+        <h2 class="text-darkGray text-2xl pl-5 font-bold">Get started</h2>
+        <div class="text-center text-xl pt-2 p-4">
+          <input class="pl-5 rounded-full" type="text" id="username-signup" placeholder="Username" />
+        </div>
+        <div class="text-center text-xl pt-2 p-4">
+          <input class="pl-5  rounded-full" type="text" id="email-signup" placeholder="Email" />
+        </div>
+        <div class="text-center text-xl p-4 pt-2">
+          <input class="pl-5 rounded-full" type="password" id="password-signup" placeholder="Password" />
+        </div>
+        <div class="text-center text-xl pt-2 pb-2 p-12">
+          <a href="/homepage" id="login-user"
+            class="text-white bg-darkerBlue flex p-3 px-6 pt-2 block rounded-full baseline hover:bg-brightRed md:block">
+            sign up
+          </a>
+        </div>
+      </form>
+    </div>
+
+    <div class="bg-white mx-auto p-5 ">
+      <form class="pt-3 bg-lightPurp mx-auto">
+        <h2 class="text-darkGray text-2xl pl-5 font-bold">Login</h2>
+        <div class="text-center text-xl pt-2 p-4">
+          <input class="pl-5 rounded-full" type="text" id="email-signup" placeholder="Email" />
+        </div>
+        <div class="text-center text-xl p-4 pt-2">
+          <input class="pl-5 rounded-full" type="password" id="password-signup" placeholder="Password" />
+        </div>
+        <div class="text-center text-xl p-4 pt-2">
+          <a href="/homepage" id="login-user"
+            class="text-white bg-darkerBlue flex p-3 px-6 pt-2 block rounded-full basline hover:bg-brightRed md:block">
+            log in
+          </a>
+        </div>
+      </form>
+    </div>
+
+    {{!-- spotify login --}}
+    <div class="container">
+      <div id="login">
+        <a href="/spotify-login" class="btn btn-primary">Log in with Spotify</a>
+      </div>
+      <div id="loggedin">
+        <div id="user-profile">
+        </div>
+        <div id="oauth">
+        </div>
+        <button class="btn btn-default" id="obtain-new-token">Obtain new token using the refresh token</button>
+      </div>
+    </div>
+
+    <script id="user-profile-template" type="text/x-handlebars-template">
+                  <h1>Logged in as {{display_name}}</h1>
+                  <div class="media">
+                    <div class="pull-left">
+                      <img class="media-object" width="150" src="{{images.0.url}}" />
+                    </div>
+                    <div class="media-body">
+                      <dl class="dl-horizontal">
+                        <dt>Display name</dt><dd class="clearfix">{{display_name}}</dd>
+                        <dt>Id</dt><dd>{{id}}</dd>
+                        <dt>Email</dt><dd>{{email}}</dd>
+                        <dt>Spotify URI</dt><dd><a href="{{external_urls.spotify}}">{{external_urls.spotify}}</a></dd>
+                        <dt>Link</dt><dd><a href="{{href}}">{{href}}</a></dd>
+                        <dt>Profile Image</dt><dd class="clearfix"><a href="{{images.0.url}}">{{images.0.url}}</a></dd>
+                        <dt>Country</dt><dd>{{country}}</dd>
+                      </dl>
+                    </div>
+                  </div>
+                </script>
+
+    <script id="oauth-template" type="text/x-handlebars-template">
+                  <h2>oAuth info</h2>
+                  <dl class="dl-horizontal">
+                    <dt>Access token</dt><dd class="text-overflow">{{access_token}}</dd>
+                    <dt>Refresh token</dt><dd class="text-overflow">{{refresh_token}}</dd>
+                  </dl>
+                </script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+    <script src="/javascript/spotify-login.js"></script>
+
+    <script src=""></script>
+</section>
