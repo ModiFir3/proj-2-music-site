@@ -5,6 +5,7 @@ const path = require('path');
 const session = require('express-session');
 
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
+
 const sequelize = require('./config/connection');
 const routes = require('./controllers');
 const helpers = require('./utils/helpers');
@@ -15,9 +16,9 @@ const sess = {
     resave: false,
     saveUninitialized: true,
     store: new SequelizeStore({
-        db: sequelize
+      db: sequelize
     })
-};
+  };
 
 
 const app = express();
@@ -45,6 +46,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
     // app.use(cors());
     // app.use(cookieParser());
+
+// Turn on sessions
+app.use(session(sess));
 
 
 //turn on routes
