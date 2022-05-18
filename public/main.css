@@ -670,7 +670,8 @@ body {
 }
 
 #title {
-  font-size: xx-large;
+  font-size: 45px;
+  font-weight: bolder;
 }
 
 .hover\:bg-brightRed:hover {
@@ -679,14 +680,6 @@ body {
 }
 
 @media (min-width: 480px) {
-  .sm\:w-1\/2 {
-    width: 50%;
-  }
-
-  .sm\:flex-row {
-    flex-direction: row;
-  }
-
   .sm\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-y-reverse: 0;
     margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
@@ -699,11 +692,18 @@ body {
     display: block;
   }
 
+  .md\:w-1\/2 {
+    width: 50%;
+  }
+
+  .md\:flex-row {
+    flex-direction: row;
+  }
+
   .md\:space-y-1 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-y-reverse: 0;
     margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
   }
 }
-
 
