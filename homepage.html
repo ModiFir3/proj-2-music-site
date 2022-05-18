@@ -24,61 +24,72 @@
 
         <!--Responsive Menu-->
         <div class="flex">
+
             <div class="z-20 fixed top-0 lg:left-0 h-screen lg:w-64 w-auto bg-bluePurple
             shadow-2xl peer-focus:left-0 peer:transition ease-out delay-150 duration-200
              hidden rounded-lg" id="menu">
 
 
-                <div class="flex-col flex-wrap justify-between">
+                <div class="flex flex-col flex-wrap items-center justify-between">
+
                     <!--Search Bar-->
-                    <form class="flex items-center" action="">
+                    <form class="flex-col items-center p-4 w-full" action="">
                         <input type="text" name="search" placeholder="Search Music" autocomplete="off"
                             aria-label="Search Music" class="px-3 py-2 w-full font-semibold placeholder-gray-500
                  text-black rounded-2xl border-none ring-2 ring-gray-300 focus:ring-gray-500 focus:ring-2 center">
                     </form>
-                    <div class="py-10">
-                        <!--Buttons-->
-                        <button class="relative flex z-20 peer h-28 w-28 rounded-full bg-lightPurp 
-            hover:bg-purple-600 focus:bg-purple-600 active:bg-purple-700 transition hover:shadow-xl">
-                            <img class="justify-evenly h-20 w-20" src="./public/images/Homeheadphones.png"
+
+                    <!--Buttons-->
+                    <div class="flex-col p-8 aspect-square space-y-8">
+
+                        <button class="relative flex items-center justify-center h-32 w-32 mt-2 mb-2 mx-auto
+                        shadow-lg bg-lightPurp hover:bg-purple-500 rounded-3xl hover:rounded-xl transition-all
+                        duration-500 ease-linear cursor-pointer z-20">
+                            <img class="flex-auto items-center p-2 h-full w-full" src="./public/images/Homeheadphones.png"
                                 alt="Home Button">
                         </button>
 
-                        <button class="relative flex z-20 peer h-28 w-28 rounded-full bg-lightPurp 
-            hover:bg-purple-600 focus:bg-purple-600 active:bg-purple-700 transition">
-                            <img class="justify-evenly h-20 w-20" src="./public/images/PlaylistICON.png"
+                        <button
+                            class="relative flex items-center justify-center h-32 w-32 mt-2 mb-2 mx-auto
+                            shadow-lg bg-lightPurp hover:bg-purple-500 rounded-3xl hover:rounded-xl transition-all
+                            duration-500 ease-linear cursor-pointer z-20">
+                            <img class="flex-auto items-center p-2 h-full w-full" src="./public/images/PlaylistICON.png"
                                 alt="My Playlists">
                         </button>
 
-                        <button class="relative flex z-20 peer h-28 w-28 rounded-full bg-lightPurp 
-            hover:bg-purple-600 focus:bg-purple-600 active:bg-purple-700 transition">
-                            <img class="justify-evenly h-20 w-20" src="./public/images/AlbumIcon.png" alt="">
-                            Top Playlists</button>
+                        <button class="relative flex items-center justify-center h-32 w-32 mt-2 mb-2 mx-auto
+                        shadow-lg bg-lightPurp hover:bg-purple-500 rounded-3xl hover:rounded-xl transition-all
+                        duration-500 ease-linear cursor-pointer z-20">
+                            <img class="flex-auto items-center p-2 h-full w-full" src="./public/images/AlbumIcon.png" alt="">
+                        </button>
 
-                        <button class="relative flex z-20 peer h-28 w-28 rounded-full bg-lightPurp 
-            hover:bg-purple-600 focus:bg-purple-600 active:bg-purple-700 transition">
-                            <img class="justify-evenly h-20 w-20"
-                                src="./public/images/young-girl-cartoon-character-listening-music-from-her-mobile-phone-2948551-2447318 copy.png"
-                                alt="">
-                            Crescendo Creators</button>
-
-
+                        <button class="relative flex items-center justify-center h-32 w-32 mt-2 mb-2 mx-auto
+                        shadow-lg bg-lightPurp hover:bg-purple-500 rounded-3xl hover:rounded-xl transition-all
+                        duration-500 ease-linear cursor-pointer z-20">
+                            <img class="flex-auto items-center p-2 h-full w-full" src="./public/images/young-girl-cartoon-character-listening-music-from-her-mobile-phone-2948551-2447318 copy.png" alt="">
+                        </button>
                     </div>
 
                 </div>
 
             </div>
-            <div class="z-10 fixed top-0 left-0 w-auto h-screen bg-gray-900
-            bg-opacity-30 opacity-0 peer-focus:opactiy-100 peer:transition duration-200" id="menu">
+
+            <div class="z-10 fixed top-0 left-0 w-auto h-screen bg-bluePurple
+            bg-opacity-0 opacity-0 peer-focus:opactiy-100 peer:transition duration-200" id="">
             </div>
         </div>
 
 
         <!--Menu Button-->
-        <button class="relative z-30 peer h-16 w-16 rounded-full bg-lightPurp 
-        hover:bg-purple-600 focus:bg-purple-600 active:bg-purple-700 transition" id="button">
-            <img src="./public/images/AlienFace.png" alt="">
-        </button>
+        <div class='z-30 peer h-20 w-20' id="">
+            <button class="relative flex items-center justify-center h-20 w-20 rounded-full
+            bg-lightPurp mt-1 mb-1 mx-auto shadow-2xl hover:bg-purple-500 hover:rounded-3xl
+             transition-all duration-700 ease-linear cursor-pointer" id="button">
+                <img src="./public/images/AlienFace.png" alt="">
+            </button>
+        </div>
+
+
     </div>
 
     <!--Hero Section-->
