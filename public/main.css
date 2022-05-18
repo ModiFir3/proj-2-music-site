@@ -669,6 +669,10 @@ body {
   background-color: #5C5AC9;
 }
 
+#title {
+  font-size: xx-large;
+}
+
 .hover\:bg-brightRed:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(255 68 0 / var(--tw-bg-opacity));
@@ -701,8 +705,5 @@ body {
     margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
   }
 }
-
- 
-
 
 
