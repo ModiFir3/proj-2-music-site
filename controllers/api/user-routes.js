@@ -40,11 +40,33 @@ router.post('/', (req, res) => {
         email: req.body.email,
         password: req.body.password
     })
-        .then(dbUserData => res.json(dbUserData))
-        .catch(err => {
-            console.log(err);
-            res.status(400).json(err);
+        // .then(dbUserData => res.json(dbUserData))
+        // .catch(err => {
+        //     console.log(err);
+        //     res.status(400).json(err);
+        // });
+        // * Allows for session.loggedIn
+        .then(dbUserData =>{
+            req.session.save(() =>{
+                req.session.username = dbUserData.username,
+                req.session.email = dbUserData.email,
+                req.session.loggedIn = true;
+
+                res.json(dbUserData);
+            });
+        })
+});
+
+router.post('/logout', (req, res) =>{
+    if(req.session.loggedIn){
+        req.session.destroy(() =>{
+            // ? 204 Code means success (No content)
+            // ! states logout was successful
+            res.status(404).end();
         });
+    }else{
+        res.status(404).end();
+    }
 });
 
 //future development: update a user name or email
