@@ -1,8 +1,26 @@
 {
+  "name": "proj-2-music-site",
+  "version": "1.0.0",
+  "description": "# description",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "seeds": "node seeds/index.js",
-    "start": "nodemon server.js"
+    "build": "tailwindcss -i ./public/stylesheets/style.css -o ./public/main.css",
+    "watch": "tailwindcss -i ./public/stylesheets/style.css -o ./public/main.css --watch",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laynewegenast/proj-2-music-site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/laynewegenast/proj-2-music-site/issues"
+  },
+  "homepage": "https://github.com/laynewegenast/proj-2-music-site#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.0.24"
   },
   "dependencies": {
     "cookie-parser": "^1.4.6",
@@ -10,13 +28,11 @@
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "express-handlebars": "^6.0.6",
+    "mysql": "^2.18.1",
     "mysql2": "^2.3.3",
     "nodemon": "^2.0.16",
     "querystring": "^0.2.1",
     "request": "^2.88.2",
     "sequelize": "^6.19.0"
-  },
-  "devDependencies": {
-    "tailwindcss": "^3.0.24"
   }
 }
