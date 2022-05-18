@@ -1,5 +1,6 @@
 var button = document.querySelector('#button');
-var menu = document.querySelector('#menuBig');
+var menu = document.querySelector('#menu');
+
 
 button.addEventListener('click', () => {
   if (menu.classList.contains('hidden')) {
@@ -7,4 +8,5 @@ button.addEventListener('click', () => {
   } else {
       menu.classList.add('hidden');
   }
+
 })
