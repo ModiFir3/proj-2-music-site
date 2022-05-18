@@ -8,16 +8,17 @@ const sequelize = require("../config/connection");
 const seedAll = async () => {
   await sequelize.sync({ force: true });
   console.log("--------------");
+
   await seedUsers();
   console.log("--------------");
 
   await seedPlaylists();
   console.log("--------------");
 
-  await seedComments();
+  await seedSongs();
   console.log("--------------");
 
-  await seedSongs();
+  await seedComments();
   console.log("--------------");
 
   process.exit(0);
