@@ -1,4 +1,4 @@
-const { Playlist } = require("../models");
+const { Playlist, Comment } = require("../models");
 
 const playlistdata = [
   {
@@ -21,6 +21,6 @@ const playlistdata = [
   },
 ];
 
-const seedPlaylists = () => Comment.bulkCreate(playlistdata);
+const seedPlaylists = () => Playlist.bulkCreate(playlistdata);
 
 module.exports = seedPlaylists;
