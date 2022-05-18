@@ -1,5 +1,5 @@
 module.exports = {
-  content: ['./*.handlebars'],
+  content: ['./views/*.handlebars'],
   theme: {
     screens: {
       xs: '375px',
