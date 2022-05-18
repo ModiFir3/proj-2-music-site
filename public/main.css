@@ -582,16 +582,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(235 235 249 / var(--tw-bg-opacity));
 }
 
-.p-5 {
-  padding: 1.25rem;
-}
-
 .p-3 {
   padding: 0.75rem;
 }
 
 .p-2 {
   padding: 0.5rem;
+}
+
+.p-5 {
+  padding: 1.25rem;
 }
 
 .p-4 {
@@ -609,10 +609,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .pt-2 {
   padding-top: 0.5rem;
-}
-
-.pr-2 {
-  padding-right: 0.5rem;
 }
 
 .pl-5 {
@@ -641,15 +637,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .text-center {
   text-align: center;
-}
-
-.font-sans {
-  font-family: Asap, sans-serif;
-}
-
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
 }
 
 .text-3xl {
@@ -711,10 +698,6 @@ body {
 @media (min-width: 768px) {
   .md\:block {
     display: block;
-  }
-
-  .md\:flex {
-    display: flex;
   }
 
   .md\:w-1\/2 {
