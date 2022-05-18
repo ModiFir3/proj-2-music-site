@@ -11,7 +11,7 @@ Song.init(
             primaryKey: true,
             autoIncrement: true
         },
-        Song_name: {
+        song_name: {
             type: DataTypes.STRING,
             allowNull: false
         },
@@ -19,7 +19,7 @@ Song.init(
             type: DataTypes.STRING,
             allowNull: false
         },
-        embed_Song: {
+        embed_song: {
             type: DataTypes.STRING,
             allowNull: false
         },
