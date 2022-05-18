@@ -19,16 +19,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
-
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-app.use(express.static('public'));
-
 //turn on routes
 app.use(routes);
 
 // sync sequelize models to the database, then turn on the server
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => {
         console.log(`APP INITIALIZED ON PORT ${PORT}!`)
     })
