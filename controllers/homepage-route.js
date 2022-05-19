@@ -73,6 +73,7 @@ router.get('/playlists/:id', (req, res) => {
         .then(dbPlaylistData => {
             const playlists = dbPlaylistData.get({ plain: true });
             res.render('single-playlist', {
+                loggedIn: req.session.loggedIn,
                 playlists
             })
         })
@@ -80,6 +81,29 @@ router.get('/playlists/:id', (req, res) => {
             console.log(err);
             res.status(500).json(err);
         });
-})
+});
+
+router.get('/songs/:id', (req, res) => {
+    Song.findOne({
+        attributes: [
+            'id',
+            'song_name',
+            'artist',
+            'embed_song',
+            'playlist_id'
+        ]
+    })
+        .then(dbSongData => {
+            const songs = dbSongData.get({ plain: true });
+            res.render('singlesong', {
+                loggedIn: req.session.loggedIn,
+                songs
+            })
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        })
+});
 
 module.exports = router;
