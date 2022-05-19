@@ -108,7 +108,6 @@ router.get('/songs/:id', (req, res) => {
     })
         .then(dbSongData => {
             const songs = dbSongData.get({ plain: true });
-            console.log(dbSongData)
             res.render('singlesong', {
                 loggedIn: req.session.loggedIn,
                 songs
