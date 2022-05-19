@@ -4,6 +4,8 @@
     <br>
     {{#each playlists.songs}}
     <div>
+        <a class="text-white bg-darkerBlue flex  items-center justify-between p-3 px-6  pt-2 block rounded-full baseline"
+            href="/song/{{id}}">{{song_name}}</a>
         <iframe style="border-radius:12px" src="{{embed_song}}" width="100%" height="80" frameBorder="0"
             allowfullscreen=""
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
