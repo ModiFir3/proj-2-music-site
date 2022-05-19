@@ -1,8 +1,12 @@
-<div>
+<div class="relative container mx-auto px-12">
     {{#each playlists}}
+<<<<<<< HEAD
     <a href="/playlists/{{id}}">{{playlist_name}}</a>
+=======
+    <a class="text-white bg-darkerBlue flex  items-center justify-between p-3 px-6  pt-2 block rounded-full baseline" href="/playlist/{{id}}">{{playlist_name}}</a>
+>>>>>>> a95ae2dc8b0aa1cadc5ea15ab06cc74c6fa760da
     <div>
-        <iframe style="border-radius:12px" src="{{embed_playlist}}" width="100%" height="380" frameBorder="0"
+        <iframe class="p-12" style="border-radius:12px" src="{{embed_playlist}}" width="100%" height="380" frameBorder="0"
             allowfullscreen=""
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
     </div>
