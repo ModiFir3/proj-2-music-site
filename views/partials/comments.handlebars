@@ -1,0 +1,22 @@
+{{/if}}
+<div class="comment-form w-full mx-auto max-w-xl h-full bg-white rounded-lg px-4 pt-2 pb-2">
+    <div class="comments">
+        {{#each songs.comments }}
+        <section class="comment p-2">
+            <div class="meta">
+                {{user.username}} on {{created_at}}
+            </div>
+            <div class="text">
+                {{comment_text}}
+            </div>
+        </section>
+    </div>
+    </section>
+    </section>
+    {{/each}}
+</div>
+</div>
+
+{{#if loggedIn}}
+<script src="/javascript/comment.js"></script>
+{{/if}}
