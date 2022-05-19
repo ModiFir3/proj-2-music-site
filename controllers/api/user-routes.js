@@ -96,7 +96,7 @@ router.post('/logout', (req, res) => {
         req.session.destroy(() => {
             // ? 204 Code means success (No content)
             // ! states logout was successful
-            res.status(404).end();
+            res.status(204).end();
         });
     } else {
         res.status(404).end();

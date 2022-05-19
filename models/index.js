@@ -12,6 +12,8 @@ Comment.belongsTo(Song, {
     foreignKey: 'song_id'
 });
 
+
+
 Song.belongsTo(Playlist, {
     foreignKey: 'playlist_id'
 });
