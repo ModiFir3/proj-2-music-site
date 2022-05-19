@@ -46,7 +46,7 @@ router.post('/', (req, res) => {
         comment_text: req.body.comment_text,
         song_id: req.body.song_id,
         //change this to the session 
-        user_id: req.session.user_id
+        user_id: req.body.user_id
     })
         .then(dbCommentData => res.json(dbCommentData))
         .catch(err => {

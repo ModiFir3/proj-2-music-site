@@ -85,6 +85,9 @@ router.get('/playlists/:id', (req, res) => {
 
 router.get('/songs/:id', (req, res) => {
     Song.findOne({
+        where: {
+            id: req.params.id
+        },
         attributes: [
             'id',
             'song_name',
@@ -98,13 +101,12 @@ router.get('/songs/:id', (req, res) => {
                 attributes: ['id', 'comment_text', 'user_id', 'song_id', 'created_at'],
                 include:{
                     model: User,
-                    attributes:['username']
+                    attributes:[ 'id', 'username']
                 }
             }
         ]
     })
         .then(dbSongData => {
-            console.log(dbSongData);
             const songs = dbSongData.get({ plain: true });
             res.render('singlesong', {
                 loggedIn: req.session.loggedIn,
