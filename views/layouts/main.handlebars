@@ -1,40 +1,58 @@
-<!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CRESCENDO</title>
     <link rel="stylesheet" href="/main.css" />
     <link rel="stylesheet" href="/stylesheets/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Asap&display=swap" rel="stylesheet">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Asap&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
-    <nav class="relative container  mx-auto p-5">
-        <div class="flex items-center justify-between">
-            <a href='/' id="title" class="pt-2 font-sans text-5xl text-white pr-2">
-                CRESCENDO
-            </a>
-            {{#if loggedIn }}
-            <button type="submit">Log Out</button>
-            {{else}}
-            <a href="/login" id="login"
-                class="text-white bg-darkerBlue flex p-3 px-6  pt-2 block rounded-full baseline hover:bg-brightRed md:flex">
-                Login
-            </a>
-            {{/if}}
-        </div>
+  <body>
+    <nav class="relative container mx-auto p-5">
+      <div class="flex items-center justify-between">
+        <a href="/" id="title" class="pt-2 font-sans text-5xl text-white pr-2">
+          CRESCENDO
+        </a>
+        {{#if loggedIn}}
+          <a
+            href=""
+            id="logout"
+            class="text-white bg-darkerBlue flex p-3 px-6 pt-2 block rounded-full baseline hover:bg-brightRed md:flex"
+          >
+            logout
+          </a>
+          <a
+            href="/playlists"
+            id="playlist"
+            class="text-white bg-darkerBlue flex p-3 px-6 pt-2 block rounded-full baseline hover:bg-brightRed md:flex"
+          >
+            playlists
+          </a>
+        {{else}}
+          <a
+            href="/login"
+            id="login"
+            class="text-white bg-darkerBlue flex p-3 px-6 pt-2 block rounded-full baseline hover:bg-brightRed md:flex"
+          >
+            Login
+          </a>
+        {{/if}}
+      </div>
     </nav>
 
-    {{{ body }}}
+    {{{body}}}
 
-    {{#if loggedIn }}
-    <script src="javascript/logout.js"></script>
-    {{/if }}
-</body>
+    {{#if loggedIn}}
+      <script src="/javascript/logout.js"></script>
+    {{/if}}
+  </body>
 
 </html>
