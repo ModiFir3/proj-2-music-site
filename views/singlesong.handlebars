@@ -22,7 +22,7 @@
             <div class="w-full px-3 mb-2 mt-2">
 
                 <!--COMMENT HERE!-->
-                <textarea name="comment-body"
+                <textarea name="comment_text"
                     class="bg-gray-100 rounded border border-gray-400 leading-normal resize-none w-full h-20 py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white"
                     placeholder="Type Your Comment">
                 </textarea>
@@ -40,3 +40,15 @@
             </div>
     </form>
 {{/if}}
+<div class="comments">
+    {{#each songs.comments }}
+    <section class="comment">
+        <div class="meta">
+            {{user.username}} on {{created_at}}
+        </div>
+        <div class="text">
+            {{comment_text}}
+        </div>
+    </section>
+    {{/each}}
+</div>

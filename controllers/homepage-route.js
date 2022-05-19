@@ -91,9 +91,20 @@ router.get('/songs/:id', (req, res) => {
             'artist',
             'embed_song',
             'playlist_id'
+        ],
+        include:[
+            {
+                model: Comment,
+                attributes: ['id', 'comment_text', 'user_id', 'song_id', 'created_at'],
+                include:{
+                    model: User,
+                    attributes:['username']
+                }
+            }
         ]
     })
         .then(dbSongData => {
+            console.log(dbSongData);
             const songs = dbSongData.get({ plain: true });
             res.render('singlesong', {
                 loggedIn: req.session.loggedIn,
@@ -105,5 +116,6 @@ router.get('/songs/:id', (req, res) => {
             res.status(500).json(err);
         })
 });
+
 
 module.exports = router;
