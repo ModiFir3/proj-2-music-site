@@ -11,27 +11,27 @@ const routes = require('./controllers');
 const helpers = require('./utils/helpers');
 
 const sess = {
-    secret: 'Super secret secret',
-    cookie: {},
-    resave: false,
-    saveUninitialized: true,
-    store: new SequelizeStore({
-      db: sequelize
-    })
-  };
+  secret: 'Super secret secret',
+  cookie: {},
+  resave: false,
+  saveUninitialized: true,
+  store: new SequelizeStore({
+    db: sequelize
+  })
+};
 
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 const hbs = exphbs.create({ helpers })
 
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.engine('handlebars', hbs.engine);
-app.set('view engine', 'handlebars');
 
 // Turn on sessions
 app.use(session(sess));
@@ -42,7 +42,7 @@ app.use(routes);
 
 // sync sequelize models to the database, then turn on the server
 sequelize.sync({ force: false }).then(() => {
-    app.listen(PORT, () => {
-        console.log(`APP INITIALIZED ON PORT ${PORT}!`)
-    })
+  app.listen(PORT, () => {
+    console.log(`APP INITIALIZED ON PORT ${PORT}!`)
+  })
 });   
