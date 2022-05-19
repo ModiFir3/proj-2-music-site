@@ -30,31 +30,15 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-
-
-
 app.engine('handlebars', hbs.engine);
-app.set('view engine', 'handlebars')
-
-
-app.engine('handlebars', hbs.engine);
-app.set('view engine', 'handlebars')
-
-
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-app.use(express.static('public'));
-    // app.use(cors());
-    // app.use(cookieParser());
+app.set('view engine', 'handlebars');
 
 // Turn on sessions
 app.use(session(sess));
 
 
 //turn on routes
-
 app.use(routes);
-
 
 // sync sequelize models to the database, then turn on the server
 sequelize.sync({ force: false }).then(() => {
