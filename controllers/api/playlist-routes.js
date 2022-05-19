@@ -27,6 +27,18 @@ router.get('/:id', (req, res) => {
             'playlist_name',
             'author',
             'embed_playlist',
+        ],
+        include: [
+            {
+                model: Song,
+                attributes: [
+                    'id',
+                    'song_name',
+                    'artist',
+                    'embed_song',
+                    'playlist_id'
+                ]
+            }
         ]
     })
         .then(dbPlaylistData => {
