@@ -21,6 +21,14 @@
             </a>
             {{#if loggedIn }}
             <button type="submit">Log Out</button>
+            <a href="" id="logout"
+                class="text-white bg-darkerBlue flex p-3 px-6  pt-2 block rounded-full baseline hover:bg-brightRed md:flex">
+                logout
+            </a>
+            <a href="/playlists" id="playlist"
+                class="text-white bg-darkerBlue flex p-3 px-6  pt-2 block rounded-full baseline hover:bg-brightRed md:flex">
+                playlists
+            </a>
             {{else}}
             <a href="/login" id="login"
                 class="text-white bg-darkerBlue flex p-3 px-6  pt-2 block rounded-full baseline hover:bg-brightRed md:flex">

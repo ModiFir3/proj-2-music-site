@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
     //     res.render('#')
     // }else
     // {
-    res.render('homepage')
+    res.render('homepage',)
     // }
 });
 
