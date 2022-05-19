@@ -24,7 +24,7 @@ router.get('/:id', (req, res) => {
     Comment.findOne({
         where: {
             id: req.params.id
-        },  
+        },
         attributes: [
             'id',
             'comment_text',
@@ -41,19 +41,18 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-     if (req.session) {
-    Comment.create({
-        comment_text: req.body.comment_text,
-        song_id: req.body.song_id,
-        //change this to the session 
-        user_id: req.session.user_id
-    })
-        .then(dbCommentData => res.json(dbCommentData))
-        .catch(err => {
-            console.log(err);
-            res.status(400).json(err);
-        });
-     }
+    if (req.session) {
+        Comment.create({
+            comment_text: req.body.comment_text,
+            song_id: req.body.song_id,
+            user_id: req.session.user_id
+        })
+            .then(dbCommentData => res.json(dbCommentData))
+            .catch(err => {
+                console.log(err);
+                res.status(400).json(err);
+            });
+    }
 });
 
 router.delete('/:id', (req, res) => {

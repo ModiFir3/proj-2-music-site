@@ -48,9 +48,9 @@ router.post('/', (req, res) => {
         // * Allows for session.loggedIn
         .then(dbUserData => {
             req.session.save(() => {
-                req.session.username = dbUserData.username,
-                    req.session.email = dbUserData.email,
-                    req.session.loggedIn = true;
+                req.session.user_id = dbUserData.id;
+                req.session.username = dbUserData.username;
+                req.session.loggedIn = true;
 
                 res.json(dbUserData);
             });
@@ -80,8 +80,8 @@ router.post('/login', (req, res) => {
 
         req.session.save(() => {
             // declare session variables
+            req.session.user_id = dbUserData.id;
             req.session.username = dbUserData.username;
-            req.session.email = dbUserData.email;
             req.session.loggedIn = true;
 
             res.json({ user: dbUserData, message: 'You are now logged in!' });
@@ -96,7 +96,7 @@ router.post('/logout', (req, res) => {
         req.session.destroy(() => {
             // ? 204 Code means success (No content)
             // ! states logout was successful
-            res.status(204).end();
+            res.status(404).end();
         });
     } else {
         res.status(404).end();

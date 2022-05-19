@@ -15,30 +15,4 @@
     {{/with}}
 </div>
 
-{{#if loggedIn}}
-<form class="comment-form w-full mx-auto max-w-xl h-full bg-white rounded-lg px-4 pt-2 pb-2">
-    <div class="flex flex-wrap -mx-3 mb-6">
-        <h2 class="px-4 pt-3 pb-2 text-gray-800 text-lg">Add a new comment</h2>
-        <div class="w-full px-3 mb-2 mt-2">
-
-            <!--COMMENT HERE!-->
-            <textarea name="comment_text"
-                class="bg-gray-100 rounded border border-gray-400 leading-normal resize-none w-full h-20 py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white"
-                placeholder="Type Your Comment">
-                </textarea>
-        </div>
-
-        <div class="w-full md:w-full flex items-start px-3">
-            <div class="flex items-start w-1/2 text-gray-700 px-2 mr-auto">
-                <p class="text-xs md:text-sm pt-px"></p>
-            </div>
-            <div class="-mr-1">
-                <button type='submit'
-                    class="text-white bg-darkerBlue py-1 px-4 tracking-wide mr-1  rounded-full baseline hover:bg-brightRed md:flex">Post
-                    Comment
-                </button>
-            </div>
-        </div>
-</form>
-
 {{> comments}}
