@@ -8,9 +8,20 @@ User.hasMany(Comment, {
     foreignKey: 'user_id',
 });
 
+Comment.belongsTo(User,{
+    foreignKey: 'user_id'
+});
+
 Comment.belongsTo(Song, {
+    foreignKey: 'comment_id'
+});
+
+
+Song.hasMany(Comment, {
     foreignKey: 'song_id'
 });
+
+
 
 Song.belongsTo(Playlist, {
     foreignKey: 'playlist_id'

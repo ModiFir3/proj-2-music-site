@@ -11,7 +11,10 @@ router.get('/', (req, res) => {
     //     res.render('#')
     // }else
     // {
-    res.render('homepage')
+    res.render('homepage', {
+        loggedIn: req.session.loggedIn
+    });
+
     // }
 });
 
@@ -70,6 +73,7 @@ router.get('/playlists/:id', (req, res) => {
         .then(dbPlaylistData => {
             const playlists = dbPlaylistData.get({ plain: true });
             res.render('single-playlist', {
+                loggedIn: req.session.loggedIn,
                 playlists
             })
         })
@@ -77,6 +81,43 @@ router.get('/playlists/:id', (req, res) => {
             console.log(err);
             res.status(500).json(err);
         });
-})
+});
+
+router.get('/songs/:id', (req, res) => {
+    Song.findOne({
+        where: {
+            id: req.params.id
+        },
+        attributes: [
+            'id',
+            'song_name',
+            'artist',
+            'embed_song',
+            'playlist_id'
+        ],
+        include: [
+            {
+                model: Comment,
+                attributes: ['id', 'comment_text', 'user_id', 'song_id', 'created_at'],
+                include: {
+                    model: User,
+                    attributes: ['id', 'username']
+                }
+            }
+        ]
+    })
+        .then(dbSongData => {
+            const songs = dbSongData.get({ plain: true });
+            res.render('singlesong', {
+                loggedIn: req.session.loggedIn,
+                songs
+            })
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        })
+});
+
 
 module.exports = router;
