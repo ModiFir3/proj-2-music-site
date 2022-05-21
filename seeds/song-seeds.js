@@ -10,7 +10,7 @@ const songData = [
     {
         song_name: "Blinding Lights",
         artist: "The Weeknd",
-        embed_song: "https://open.spotify.com/embed/track/7qiZfU4dY1lWllzX7mPBI3?utm_source=generator",
+        embed_song: "https://open.spotify.com/embed/track/0VjIjW4GlUZAMYd2vXMi3b?utm_source=generator",
         playlist_id: 1
     },
     {
@@ -26,9 +26,9 @@ const songData = [
         playlist_id: 1
     },
     {
-        song_name: "rockstar",
-        artist: "Post Malone",
-        embed_song: "https://open.spotify.com/embed/track/0e7ipj03S05BNilyu5bRzt?utm_source=generator",
+        song_name: "Lucid Dreams",
+        artist: "Juice WRLD",
+        embed_song: "https://open.spotify.com/embed/track/0s3nnoMeVWz3989MkNQiRf?utm_source=generator",
         playlist_id: 1
     },
     {
@@ -58,7 +58,7 @@ const songData = [
     {
         song_name: "Believer",
         artist: "Imagine Dragons",
-        embed_song: "https://open.spotify.com/embed/track/7crMiinWx373rNBZBaVske?utm_source=generator",
+        embed_song: "https://open.spotify.com/embed/track/1NtIMM4N0cFa1dNzN15chl?utm_source=generator",
         playlist_id: 1
     },
     {
@@ -79,6 +79,8 @@ const songData = [
         embed_song: "https://open.spotify.com/embed/track/5uCax9HTNlzGybIStD3vDh?utm_source=generator",
         playlist_id: 1
     },
+
+
     {
         song_name: "STAY",
         artist: "The Kid LAROI",
@@ -139,6 +141,8 @@ const songData = [
         embed_song: "https://open.spotify.com/embed/track/3jnMhpFIw1rtQh43XnNUxs?utm_source=generator",
         playlist_id: 2
     },
+
+
     {
         song_name: "Hell N Back",
         artist: "Bakar",
@@ -170,9 +174,9 @@ const songData = [
         playlist_id: 3
     },
     {
-        song_name: "upside down",
-        artist: "nothing,nowhere.",
-        embed_song: "https://open.spotify.com/embed/track/6bfZzQWM6AJU8ER00jY2rx?utm_source=generator",
+        song_name: "Love/Paranoia",
+        artist: "Tame Impala",
+        embed_song: "https://open.spotify.com/embed/track/5h9hkYIBWTZYFRmF6Iz1gt?utm_source=generator",
         playlist_id: 3
     },
     {
