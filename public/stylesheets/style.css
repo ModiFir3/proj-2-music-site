@@ -1,34 +1,14 @@
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
-    background-color: #5C5AC9;
-}
-.title {
-    text-decoration: none;
-    color: white;
-    font-family: 'Asap', sans-serif;
-    font-size: xx-large;
+    background-color:#5C5AC9;
+    
 }
 
-.homepage-txt {
-    color: white;
-    font-family: 'Asap', sans-serif;
-}
+ #title {
+     font-size: 42px;
+     font-weight: bolder;
+ }
 
-.btn {
-    background-color: #2C3487;
-    text-decoration: none;
-    color: white;
-    font-family: 'Asap', sans-serif;
-    border-radius: 8px;
-    border: none;
-    padding: 8px;
-}
-
-#login {
-    font-size: large;
-}
-
-#sign-up {
-    font-size: x-large;
-}
