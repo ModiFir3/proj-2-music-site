@@ -7,6 +7,7 @@
  - [License](#license)
  - [Tests](#tests)
  - [Questions](#questions)
+ - [Links](#links)
 
 ## Description
 ### Crescendo is a social music sharing site for users to connect their favorite songs and playlists from Spotify and add additional comments to increase dialogue amongst friends/musicians/etc. This site utilizes Tailwind CSS, Handlebars, the Spotify API, bCrypt, SQL & MySQL2, Express, Express sessions, Sequalize, and Node.js. The live site has been deployed through Heroku (link at bottom). 
@@ -29,6 +30,6 @@
  - Layne Wegenast
 
 ## Links
-### Github repo: https://github.com/laynewegenast/proj-2-music-site
-### Deployed application: https://obscure-brook-13370.herokuapp.com/
+- Github repo: https://github.com/laynewegenast/proj-2-music-site
+- Deployed application: https://obscure-brook-13370.herokuapp.com/
 
